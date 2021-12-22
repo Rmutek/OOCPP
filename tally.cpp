@@ -3,18 +3,18 @@
 using namespace std;
 
 class Counter {
-    private:
-        int currentCount = 0;
-    public:
-        int get_value() {
-            return currentCount;
-        }
-        void count() {
-            currentCount++;
-        }
-        void reset() {
-            currentCount = 0;
-        }
+private:
+    int value = 0;
+public:
+    int get_value() const {
+        return value;
+    }
+    void count() {
+        value++;
+    }
+    void reset() {
+        value = 0;
+    }
 };
 
 int main()
