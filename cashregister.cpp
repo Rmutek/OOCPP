@@ -13,6 +13,18 @@ private:
     double total_price;
 };
 
+void CashRegister::add_item(double price) {
+    item_count++;
+    total_price += price;
+}
+
+void CashRegister::add_items(int quantity, double price)
+{
+    for(int i = 1; i <= quantity; i++) {
+        add_item(price);
+    }
+}
+
 int main() {
     return 0;
 }
